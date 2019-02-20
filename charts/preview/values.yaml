@@ -21,4 +21,3 @@ preview:
     tag:
     pullPolicy: IfNotPresent
   probePath: /demo/hello?health=true
-
