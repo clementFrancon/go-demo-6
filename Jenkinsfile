@@ -79,7 +79,7 @@ pipeline {
             // promote through all 'Auto' promotion Environments
             sh "jx promote -b --all-auto --timeout 1h --version \$(cat ../../VERSION)"
           }
-          dir('/home/jenkins/go/src/github.com/vfarcic/go-demo-6') {
+          dir('/home/jenkins/go/src/github.com/clementfrancon/go-demo-6') {
             script {
               sleep 10
               addr=sh(script: "kubectl -n jx-staging get ing $APP_NAME -o jsonpath='{.spec.rules[0].host}'", returnStdout: true).trim()
