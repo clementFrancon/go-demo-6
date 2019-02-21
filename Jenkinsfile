@@ -40,7 +40,8 @@ pipeline {
         container('go') {
           dir('/home/jenkins/go/src/github.com/clementfrancon/go-demo-6') {
             checkout scm
-
+	    sh "make unit-test"
+	  
             // ensure we're not on a detached head
             sh "git checkout master"
             sh "git config --global credential.helper store"
