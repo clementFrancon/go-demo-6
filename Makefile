@@ -65,4 +65,4 @@ unit-test:
 	CGO_ENABLED=$(CGO_ENABLED) $(GO) test -test.v --run UnitTest --cover
 
 func-test: 
-    CGO_ENABLED=$(CGO_ENABLED) $(GO) test -test.v --run FunctionalTest --cover
+	CGO_ENABLED=$(CGO_ENABLED) $(GO) test -test.v --run FunctionalTest --cover
